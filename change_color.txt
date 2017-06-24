@@ -1,0 +1,14 @@
+// write your code here
+var image = new SimpleImage("duke_blue_devil.png");
+
+
+for (var pixel of image.values()){
+    var x = pixel.getX();
+    var y = pixel.getY();
+    if (x > y ){
+        pixel.setBlue(0);
+        pixel.setRed(0);
+        image.setPixel(x, y, pixel);
+    }
+}
+print(image);
