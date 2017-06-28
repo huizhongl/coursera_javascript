@@ -1,0 +1,17 @@
+// write your code here
+
+var image = new SimpleImage("chapel.png");
+function grayScale() {
+    
+    
+    for (var pixel of image.values()) {
+        var average = (pixel.getRed() + pixel.getBlue() + pixel.getGreen()) / 3;
+        pixel.setRed(average);
+        pixel.setGreen(average);
+        pixel.setBlue(average);
+    }
+
+    print(image);
+}
+
+grayScale(image);
